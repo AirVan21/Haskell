@@ -3,6 +3,9 @@ data Tree = Empty | Node Integer Tree Tree
 -- Main function -- 
 height inputTree = heightHelp inputTree 0
 -- Accessed leaf --
-heightHelp Empty heightRes = heightRes
+heightHelp Empty _ = 0
+heightHelp (Node value Empty Empty) heightRes = heightRes
 -- Tree search -- 
-heightHelp (Node value leftTree rightTree) heightRes = max (heightHelp leftTree (heightRes + 1)) (heightHelp rightTree (heightRes + 1)) 
+heightHelp (Node value leftTree rightTree) heightRes = let 
+														   updHeight = heightRes + 1  
+													   in max (heightHelp leftTree updHeight) (heightHelp rightTree updHeight)  
