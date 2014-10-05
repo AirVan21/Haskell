@@ -4,4 +4,5 @@ Haskell programs
 
 1 part: Basic. Functions. Accumulators. Tail recursion
 2 part: Lists. Map. Lambda functions
-3 part: Data. Any. All. Tuples
+3 part: Data. Any. All. Tuples. Function as a result. Function with permanent parameters
+4 part: List of lists. Filter. Fold. Map as a cycle.
