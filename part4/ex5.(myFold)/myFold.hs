@@ -4,12 +4,12 @@
 
 --}
 
-myfoldl _ base [] = base
-myfoldl inputFunc base (x:restList) = myfoldlHelp inputFunc restList (inputFunc base x)
+myfoldl _ result [] = result
+myfoldl inputFunc base (x:restList) = myfoldl inputFunc (inputFunc base x) restList
 
--- Structural Induction --
-myfoldlHelp _ [] result = result
-myfoldlHelp func (x:rest) result = myfoldlHelp func rest (func result x)  
+{--
+	Thank you for a beautiful idea! 
+--}
 
 -- Example --
 test = (foldl (-) 1 [2,3,5]) == (myfoldl (-) 1 [2,3,5]) 
