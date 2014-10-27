@@ -7,4 +7,4 @@ Haskell programs
 3 part: Data. Any. All. Tuples. Function as a result. Function with permanent parameters
 4 part: List of lists. Filter. Fold. Map as a cycle. Foldl - Foldr
 5 part: List comprehension. Polymorph data types
-6 part: Lazy evaluation. Ininite lists
+6 part: Lazy evaluation. Infinite lists. FoldTree
