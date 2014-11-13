@@ -10,4 +10,4 @@ Haskell programs
 6 part: Lazy evaluation. Infinite lists. FoldTree
 7 part: "Tying the knot" technique. Infinite integer list calculation (sqrt 2)
 8 part: ConcatMap. Type description 
-9 part: Bind with "do-return". Classes
+9 part: Bind with "do-return". Classes: Num, Eq, Show, Ord
