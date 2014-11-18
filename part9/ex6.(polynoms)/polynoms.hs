@@ -1,3 +1,11 @@
+{--
+	UPD!
+
+	FIXED : Problems with (Polynom [0,1] == Polynom [1]) == True
+	        Show for polynom
+
+--}
+
 {-- Task
 
 	Implement polynoms via Haskell class
@@ -14,10 +22,12 @@ data Polynom = Polynom [Int]
 
 -- Implementing Comparison --
 instance Eq Polynom where
-	(Polynom indexes1) == (Polynom indexes2) = (indexes1 == indexes2)
+	(Polynom indexes1) == (Polynom indexes2) = let 
+	                                               arguments = equalize indexes1 indexes2 
+		                                       in (fst arguments) == (snd arguments)
 
 instance Show Polynom where
-	show (Polynom list) = show list 
+	show (Polynom list) = showPolynom list [] 
 
 -- Implementing additiom --
 instance Num Polynom where
@@ -68,6 +78,24 @@ equalize list1 list2 = let
 					      then ((extendByZerosLeft list2 lengthDiff), list1)
 					      else ((extendByZerosLeft list1 lengthDiff), list2)
 
+-- Common polynom representation --
+showPolynom [x] accum = if (x /= 0)
+	                    then accum ++ " " ++ defSign(x) ++ show (abs(x))
+	                    else accum 
+
+showPolynom (x:xs) accum = let
+                               degree = length(xs)
+                               sign = defSign(x)
+                               xabs = abs(x)
+                           in if (x /= 0) 
+                           	  then if(abs(x) /= 1) 
+                           	  	   then showPolynom xs (accum ++ sign ++  show xabs ++ "x^" ++ show degree) 
+                           	  	   else showPolynom xs (accum ++ sign ++ "x^" ++ show degree)   
+                           	  else showPolynom xs accum
+-- Sign printing function --
+defSign num = if (num > 0)
+	          then " + "
+	          else " - "
 -- Testing --
 test1 = Polynom [2,1,0] * Polynom [1,0,0]  == Polynom [2,1,0,0,0]
 test2 = Polynom [1,1,0] + Polynom [-1,0,1] == Polynom [1,1]
