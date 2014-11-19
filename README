@@ -2,12 +2,13 @@ Haskell programs
 
 ========================================================================================
 
-1 part: Basic. Functions. Accumulators. Tail recursion
-2 part: Lists. Map. Lambda functions
-3 part: Data. Any. All. Tuples. Function as a result. Function with permanent parameters
-4 part: List of lists. Filter. Fold. Map as a cycle. Foldl - Foldr
-5 part: List comprehension. Polymorph data types
-6 part: Lazy evaluation. Infinite lists. FoldTree
-7 part: "Tying the knot" technique. Infinite integer list calculation (sqrt 2)
-8 part: ConcatMap. Type description 
-9 part: Bind with "do-return". Classes: Num, Eq, Show, Ord. Characteristic function
+1  part : Basic. Functions. Accumulators. Tail recursion
+2  part : Lists. Map. Lambda functions
+3  part : Data. Any. All. Tuples. Function as a result. Function with permanent parameters
+4  part : List of lists. Filter. Fold. Map as a cycle. Foldl - Foldr
+5  part : List comprehension. Polymorph data types
+6  part : Lazy evaluation. Infinite lists. FoldTree
+7  part : "Tying the knot" technique. Infinite integer list calculation (sqrt 2)
+8  part : ConcatMap. Type description 
+9  part : Bind with "do-return". Classes: Num, Eq, Show, Ord. Characteristic function
+10 part : Maybe class (Just x, Nothing). Failure continuation tequnique
