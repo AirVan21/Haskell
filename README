@@ -11,4 +11,4 @@ Haskell programs
 7  part : "Tying the knot" technique. Infinite integer list calculation (sqrt 2)
 8  part : ConcatMap. Type description 
 9  part : Bind with "do-return". Classes: Num, Eq, Show, Ord. Characteristic function
-10 part : Maybe class (Just x, Nothing). Failure continuation tequnique
+10 part : Maybe class (Just x, Nothing). Failure continuation tequnique. Symbolic expression 
