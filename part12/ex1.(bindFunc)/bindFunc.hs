@@ -13,7 +13,6 @@ func1 >>>= func2 = \xs -> let
                              (x, rest) = func1 xs
                           in func2 x rest
 
--- Really? --
 return1 value xs = (value, xs) 
 
 f = find (>3) >>>= \x -> find (>x) >>>= \y -> return1 (x + y) 
