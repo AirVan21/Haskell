@@ -6,6 +6,7 @@
 
 -- Implementing find on pair list --
 {-- Default variable value is 0 --}
+
 find func [] = 0 
 find func (x:xs) = if func (fst x)
                    then (snd x)
